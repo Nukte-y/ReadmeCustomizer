@@ -27,13 +27,18 @@ function generateMarkdown(data) {
          `- [License](#license)\n` + 
          `- [Contributing](#contributing)\n\n` +
          `- [Tests](#tests)\n\n` +
+         `- [Questions](#questions)\n\n` +
          `## Description\n\n${data.description}\n\n` +
          `## Installation\n\n${data.installation}\n\n` +
          `## Usage\n\n${data.usage}\n\n` +
          `## License\n\n${data.license}\n\n` + 
          `${licenseNotice}\n\n` +
          `## Contributing\n\n${data.contributing}\n\n` +
-         `## Tests\n\n${data.tests}\n\n` 
+         `## Tests\n\n${data.tests}\n\n` +
+         `## Questions\n\n Github account: **[${data.gitHub}](https://github.com/${data.gitHub})**\n\n` +
+         `For additional questions, please feel free to reach out via email.\n` +
+         `**${data.email}**`
+
 }
 
 module.exports = generateMarkdown;
