@@ -2,6 +2,7 @@
 function generateMarkdown(data) {
   let licenseBadge = '';
   let licenseURL = '';
+  let licenseNotice = `This application is covered under the **[${data.license}](${licenseURL})** license.`; //make the link bold
 
   if (data.license === "MIT") {
       licenseBadge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)\n\n";
@@ -23,11 +24,14 @@ function generateMarkdown(data) {
          `- [Description](#description)\n` +
          `- [Installation](#installation)\n` +
          `- [Usage](#usage)\n` +
+         `- [License](#license)\n` + 
          `- [Contributing](#contributing)\n\n` +
          `- [Tests](#tests)\n\n` +
          `## Description\n\n${data.description}\n\n` +
          `## Installation\n\n${data.installation}\n\n` +
          `## Usage\n\n${data.usage}\n\n` +
+         `## License\n\n${data.license}\n\n` + 
+         `${licenseNotice}\n\n` +
          `## Contributing\n\n${data.contributing}\n\n` +
          `## Tests\n\n${data.tests}\n\n` 
 }
